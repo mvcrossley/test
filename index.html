@@ -7,55 +7,66 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-		<!-- External CSS -->
-		<link rel="stylesheet" href="main.css">
+		<!-- External CSS and Google Fonts-->
+		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
 		<!-- JavaScript -->
 		<script src="js/main.js"></script>
 	</head>
 
 	<body>
-		<h2 class="hide">Welcome to (New Company)</h2>
+		<section class="mainsite">
+			<h2 class="hide">Welcome to (New Company)</h2>
 
-		<section id="popup">
-			<h2 class="hide">An Invitation</h2>
+			<section class="popup">
+				<h2 class="hide">An Invitation</h2>
 
-			<!--Introduction starts here-->
-			<div class="center" id="part1">
-				<h3>YOUR ARE CORDIALLY INVITED TO THE LAUNCH</h2>
-				<p class="italic">of the</p>
-				<h2>NEW COMPANY WEBSITE</h2>
-				<p>Lorem ipsum dolor sit amet, vix suas liber conclusionemque eu. Ad quo esse purto eros, nemore volutpat ut quo, copiosae concludaturque nam in.</p>
-			</div>
+				<!--Exit button is located here-->
+				<div class="exit-wrapper">
+					<h2 class="hide">Exit this popup:</h2>
+					<button class="exit">x</button>
+				</div>
 
-			<!--Lorem Ipsum list starts here-->
-			<div id="part2">
-				<h3 class="center">AD EST ODIO NOSTER:</h3>
-				<ul>
-					<li>Ex vis amet groeci accumsan</li>
-					<li>Civibus iracundia quo ad</li>
-					<li>Eu impetus feugiat civibus qui</li>
-					<li>Mel in mucius arumentum, an accumsan petentium vim</li>
-					<li>Vim at rationibus interesset</li>
-				</ul>
-			</div>
+				<!--Introduction starts here-->
+				<div class="center part1">
+					<h3>YOU ARE CORDIALLY INVITED TO THE LAUNCH</h2>
+					<p class="italic">of the</p>
+					<h2 class="serif-heading">NEW<br><span class="company-red">COMPANY</span><br>WEBSITE</h2>
+					<p>Lorem ipsum dolor sit amet, vix suas liber conclusionemque eu. Ad quo esse purto eros, nemore volutpat ut quo, copiosae concludaturque nam in.</p>
+				</div>
 
-			<!--Form portion starts here-->
-			<div id="part3">
-				<h4>GET YOUR FOOT IN THE DOOR</h4>
-				<p>Know the moment our new website goes live.</p>
+				<!--Lorem Ipsum list starts here-->
+				<div class="part2">
+					<h3 class="center">AD EST ODIO NOSTER:</h3>
+					<ul>
+						<li>Ex vis amet groeci accumsan</li>
+						<li>Civibus iracundia quo ad</li>
+						<li>Eu impetus feugiat civibus qui</li>
+						<li>Mel in mucius arumentum, an accumsan petentium vim</li>
+						<li>Vim at rationibus interesset</li>
+					</ul>
+				</div>
 
-				<form>
-					<label class="hide">Enter your name:</label>
-					<input id="name" type="text" placeholder="Name" required>
-					<label class="hide">Enter your email address:</label>
-					<input id="email" type="text" placeholder="Email" required>
-					<input type="submit" value="SUBMIT">
-					<br>
-					<input type="checkbox" required>
-					<label class="conditions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</label>
-				</form>
-			</div>
+				<!--Form portion starts here-->
+				<div class="part3 center">
+					<h4 class="serif-heading">GET YOUR FOOT IN THE DOOR</h4>
+					<p>Know the moment our new website goes live.</p>
+
+					<form>
+						<label class="hide">Please enter your name:</label>
+						<input class="name inputbox" type="text" placeholder="Name" required>
+						<label class="hide">Please enter your email:</label>
+						<input class="email inputbox" type="text" placeholder="Email" required>
+						<label class="hide">Click to submit your information:</label>
+						<input class="submit" type="submit" value="SUBMIT">
+						<br>
+						<label class="hide">Please check box to agree with terms and conditions:</label>
+						<input class="checkbox" type="checkbox" required>
+						<label class="conditions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</label>
+					</form>
+				</div>
+			</section>
 		</section>
 	</body>
 </html>

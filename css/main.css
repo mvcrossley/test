@@ -1,3 +1,59 @@
+/*Common Classes Start Here*/
+/*This class will allow screen readers to detect and read the content, while hiding the content from sighted users.*/
+.hide {
+  position: absolute;
+  left: -10000px;
+  top: auto; }
 
+.center {
+  margin: 0 auto;
+  text-align: center; }
+
+.italic {
+  font-style: italic; }
+
+.company-red {
+  color: #9f173d; }
+
+.serif-heading {
+  font-family: "Playfair Display", serif; }
+
+/*Background "Website" Styles* Start Here*/
+body {
+  background-image: url("../img/bgimg.jpg"); }
+
+/*General Popup Styles Start Here*/
+.popup {
+  width: 65%;
+  margin-top: 130px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff; }
+
+/*Exit Button styles start here*/
+.exit-wrapper {
+  width: 100%;
+  text-align: right; }
+  .exit-wrapper .exit {
+    margin-top: 15px;
+    margin-right: 15px;
+    border: none;
+    color: #9f173d;
+    background-color: transparent; }
+
+/*Popup Part 1 Styles start here*/
+.part1 {
+  display: inline; }
+  .part1 h2 {
+    font-size: 25px; }
+
+/*Popup Part 2 Styles start here*/
+.part2 ul {
+  margin-top: 90px; }
+
+/*Popup Part 3 Styles start here*/
+.part3 {
+  background: #9f173d;
+  color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
