@@ -31,7 +31,7 @@ $companyred: #9f173d;
 }
 
 .sans-serif{
-	font-family: "Roboto", sans-serif;;
+	font-family: "Roboto", sans-serif;
 }
 
 
@@ -41,6 +41,20 @@ body{
 	background-image: url("../img/bgimg.jpg");
 }
 
+/*The wood chisel and shaving image styles start here*/
+
+.shaving-wrapper{
+	position: absolute;
+	display: flex;
+}
+
+.chisel{
+	justify-content: flex-start;
+}
+
+.shave{
+	justify-content: flex-end;
+}
 
 /*General Popup Styles Start Here*/
 
@@ -48,7 +62,7 @@ body{
 .popup{
 	margin: 0 auto;
 	margin-top: 130px;
-	width: 75%;
+	width: 65%;
 	overflow: hidden;
 	background-color: #fff;
 }
@@ -75,17 +89,23 @@ body{
 	background-color: #fff;
 
 	h3{
+		position: relative;
+		z-index: 100;
 		margin: 0 auto;
 		width: 20%;
-		font-size: 12px;
+		font-size: 14px;
 		letter-spacing: 2px;
 	}
 
 	h2{
+		position: relative;
+		z-index: 100;
 		font-size: 30px;
 	}
 
 	p{
+		position: relative;
+		z-index: 100;
 		margin: 0 auto;
 		margin-top: 25px;
 		width: 50%;
@@ -94,29 +114,43 @@ body{
 
 .floating-border{
 	position: absolute;
-	top: 50px;
+	top: 90px;
 	right: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 90;
 	margin: auto;
-	width: 140px;
-	height: 00px;
-	border: 5px solid #f5f5f5;
+	width: 100px;
+	height: 320px;
+	border: 7px solid #f5f5f5;
 }
 
 .intro{
-	margin-top: 35px;
+	padding-top: 10px;
+	font-size: 14px;
 }
 
 /*Popup Part 2 Styles start here*/
 
 .part2{
-	background-color: #fff;
+	h3{
+		font-size: 14px;
+		letter-spacing: 2px;
+	}
+
 	ul{
-		margin-top: 90px;
+		margin: auto;
+		margin-top: 30px;
+		margin-bottom: 60px;
+		width: 40%;
 
 		li{
+			font-size: 14px;
+			list-style: none;
+		}
 
+		li::before{
+			content: "•"; color: $companyred;
+			margin-right: 10px;
 		}
 	}
 }
@@ -126,12 +160,59 @@ body{
 	margin-top: 35px;
 	margin-bottom: 35px;
 	width: 10%;
-	border-bottom: 1.5px solid $companyred;
+	border-bottom: 2px solid $companyred;
 }
 
 /*Popup Part 3 Styles start here*/
 
 .part3{
+	padding-top: 65px;
+	padding-bottom: 65px;
 	background: $companyred;
 	color: #fff;
+
+	h4{
+		margin: 0;
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+	p{
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	input[type=text] {
+	    width: 200px;
+	    padding: 10px 10px;
+	    border: none;
+	    color: black;
+	    font-family: "Roboto", sans-serif;
+	}
+
+	input[type=submit] {
+	    width: 100px;
+	    padding: 10px 10px;
+	    border: none;
+	    color: #fff;
+	    font-family: "Playfair Display", serif; 
+	    background-color: #000;
+	}
+}
+
+.conditions{
+	margin: auto;
+	width: 40%;
+	display: flex;
+	text-align: left;
+	font-size: 11px;
+
+	.checkbox{
+		justify-content: flex-start;
+	}
+
+	label{
+		justify-content: flex-end;
+		padding-top: 20px;
+	}
 }

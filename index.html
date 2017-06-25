@@ -20,6 +20,12 @@
 		<section class="mainsite">
 			<h2 class="hide">Welcome to (New Company)</h2>
 
+			<!--The Shavings are located here, in their own separate container-->
+			<div class="shaving-wrapper">
+				<img class="chisel" src="img/big.png" alt="An image of a chisel with wood shavings">
+				<img class="shave" src="img/little.png" alt="An image of a single wood shaving">
+			</div>
+
 			<section class="popup">
 				<h2 class="hide">An Invitation</h2>
 
@@ -53,8 +59,8 @@
 
 				<!--Form portion starts here-->
 				<div class="part3 center">
-					<h4 class="serif-heading">GET YOUR FOOT IN THE DOOR</h4>
-					<p>Know the moment our new website goes live.</p>
+					<h4 class="serif-heading">GET YOUR FOOT IN THE DOOR.</h4>
+					<p class="sans-serif">Know the moment our new website goes live.</p>
 
 					<form>
 						<label class="hide">Please enter your name:</label>
@@ -65,8 +71,10 @@
 						<input class="submit" type="submit" value="SUBMIT">
 						<br>
 						<label class="hide">Please check box to agree with terms and conditions:</label>
-						<input class="checkbox" type="checkbox" required>
-						<label class="conditions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</label>
+						<div class="conditions">
+							<input class="checkbox" type="checkbox" required>
+							<label class="sans-serif">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</label>
+						</div>
 					</form>
 				</div>
 			</section>
