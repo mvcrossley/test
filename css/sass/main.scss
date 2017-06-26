@@ -34,6 +34,10 @@ $companyred: #9f173d;
 	font-family: "Roboto", sans-serif;
 }
 
+.no-read{
+	display: none;
+}
+
 
 /*Background "Website" Styles* Start Here*/
 
@@ -47,7 +51,7 @@ body{
 
 .shaving-wrapper{
 	position:  absolute;
-	z-index: 100;
+	z-index: 99;
 	width: 100%;
 
 	display: grid;
@@ -134,11 +138,12 @@ body{
 /*Exit Button styles start here*/
 
 .exit-wrapper{
+	z-index: 100;
  	width: 100%;
 	text-align: right;
 	background-color: #fff;
 
-	.exit{
+	#exit{
 		margin-top: 15px;
 		margin-right: 15px;
 		border: none;
