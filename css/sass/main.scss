@@ -36,6 +36,19 @@ $companyred: #9f173d;
 
 .no-read{
 	display: none;
+	transition: 0.5s ease-out;
+}
+
+/*Special classes for creating parallax-like effect on scroll*/
+
+.bumpUp{
+	margin-top: -400px;
+	transition: 3.5s ease-out;
+}
+
+.bumpDown{
+	margin-top: 300px;
+	transition: 3.5s ease-out;
 }
 
 
@@ -55,34 +68,55 @@ body{
 	width: 100%;
 
 	display: grid;
-  	grid-template-columns: 30% 20% 10% 20% 20%;
-  	grid-template-rows: repeat(5, 100px);
+  	grid-template-columns: repeat(10, 10%);
+  	grid-template-rows: repeat(8, 150px);
 }
 
-.chisel{
+#chisel{
 	width: 350px;
 	height: 300px;
 
-	grid-row: 5;
+	background-image: url(../img/big.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	grid-row: 4;
 	grid-column: 1;
 }
 
-.shave{
-	width: 100px;
-	height: 75px;
+#shave{
+	width: 175px;
+	height: 150px;
+	background-image: url(../img/little.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
 
 	grid-row: 2;
-	grid-column: 5;
+	grid-column: 9;
 }
 
 /*Chisel and shaving styling for between mobile and desktop*/
 @media (max-width: 1200px) and (min-width: 320px){
-	.chisel{
+	#chisel{
+		grid-row: 2/3;
 		width: 250px;
 		height: 200px;
 	}
 
-	.shave{
+	#shave{
+		width: 75px;
+		height: 50px;
+	}
+	
+}
+
+@media (max-width: 800px) and (min-width: 650px){
+	#chisel{
+		width: 250px;
+		height: 200px;
+	}
+
+	#shave{
 		width: 75px;
 		height: 50px;
 	}
@@ -91,11 +125,11 @@ body{
 
 /*Chisel and shaving styling for approaching mobile*/
 @media (max-width: 650px){
-	.chisel{
+	#chisel{
 		display: none;
 	}
 
-	.shave{
+	#shave{
 		display: none;
 	}
 	
