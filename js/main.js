@@ -7,7 +7,7 @@
 
 	//This function will check if the user has visited the site before, and decides whether or not to toggle the popup
 	function checkVisits(){
-		if(localStorage.visits = 1){
+		if(localStorage.visits == 1){
 			//No class will be toggled, the popup will remain invisible to user and screenreader.
 			console.log("User has visited this site before.");
 		}else{
@@ -19,7 +19,6 @@
 	//This will make the popup visible after 3 seconds
 	function makeVisible(){
 		popwrap.classList.remove("no-read");
-		localStorage.visits = 1;
 	}
 
 	//This will toggle the classes that make a parallax effect
@@ -37,7 +36,7 @@
 	function exitPopup(){
 		//console.log("You have clicked the exit button");
 		popwrap.classList.add("no-read");
-		localStorage.visits = 1;
+		localStorage.visits = 1; //After the popup has been closed once, the visit is logged and it should not appear again.
 	}
 
 	window.addEventListener("load", checkVisits, false);

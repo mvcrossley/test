@@ -36,26 +36,12 @@ $companyred: #9f173d;
 
 .no-read{
 	display: none;
-	transition: 0.5s ease-out;
 }
-
-/*Special classes for creating parallax-like effect on scroll*/
-
-.bumpUp{
-	margin-top: -400px;
-	transition: 3.5s ease-out;
-}
-
-.bumpDown{
-	margin-top: 300px;
-	transition: 3.5s ease-out;
-}
-
 
 /*Background "Website" Styles* Start Here*/
 
 body{
-	height: 1400px;
+	height: 1200px;
 	background-image: url("../img/bgimg.jpg");
 	background-size: 100%;
 }
@@ -66,10 +52,11 @@ body{
 	position:  absolute;
 	z-index: 99;
 	width: 100%;
+	pointer-events: none;
 
 	display: grid;
   	grid-template-columns: repeat(10, 10%);
-  	grid-template-rows: repeat(8, 150px);
+  	grid-template-rows: repeat(6, 150px);
 }
 
 #chisel{
@@ -85,10 +72,10 @@ body{
 }
 
 #shave{
-	width: 175px;
-	height: 150px;
+	width: 100px;
+	height: 75px;
 	background-image: url(../img/little.png);
-	background-size: 50%;
+	background-size: 90%;
 	background-repeat: no-repeat;
 
 	grid-row: 2;
@@ -98,25 +85,15 @@ body{
 /*Chisel and shaving styling for between mobile and desktop*/
 @media (max-width: 1200px) and (min-width: 320px){
 	#chisel{
-		grid-row: 2/3;
+		grid-row: 4;
+
 		width: 250px;
 		height: 200px;
 	}
 
 	#shave{
-		width: 75px;
-		height: 50px;
-	}
-	
-}
+		grid-row: 2;
 
-@media (max-width: 800px) and (min-width: 650px){
-	#chisel{
-		width: 250px;
-		height: 200px;
-	}
-
-	#shave{
 		width: 75px;
 		height: 50px;
 	}
@@ -124,7 +101,7 @@ body{
 }
 
 /*Chisel and shaving styling for approaching mobile*/
-@media (max-width: 650px){
+@media (max-width: 850px){
 	#chisel{
 		display: none;
 	}
@@ -200,7 +177,7 @@ body{
 		letter-spacing: 2px;
 	}
 
-	h2{
+	h4{
 		position: relative;
 		z-index: 80;
 		font-size: 34px;
@@ -392,9 +369,10 @@ body{
 		justify-content: flex-start;
 	}
 
-	label{
+	p{
 		justify-content: flex-end;
 		padding-top: 20px;
+		font-size: 10px;
 	}
 }
 
