@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<title>New Company Site</title>
+
+		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<!-- External CSS and Google Fonts-->
+		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+	</head>
+
+	<body>
+	<h2 class="hide">Welcome to (New Company).</h2>
+		<section class="mainsite">
+			<h2 class="hide">Welcome to our new website.</h2>
+
+			<!--This div allows the Javascript file to toggle popup visibility on/off-->
+			<div id="visibility" class="no-read">
+				<!--The Shavings and Chisel are located here, in their own separate container-->
+				<div class="shaving-wrapper">
+					<h2 class="hide">Pictures of a chisel and a wood shaving are located on either side of the popup window.</h2>
+					<div id="chisel"></div>
+					<div id="shave"></div>
+				</div>
+
+				<!--This is for the thin border that surrounds the popup-->
+				<div class="popup-border">
+					<section class="popup">
+						<h2 class="hide">An Invitation</h2>
+
+						<!--Exit button is located here-->
+						<div class="exit-wrapper">
+							<h2 class="hide">Exit this popup:</h2>
+							<button id="exit">x</button>
+						</div>
+
+						<!--Introduction starts here-->
+						<div class="center part1">
+							<!--This is the rectangle floating behind the intro titles-->
+							<div class="floating-border1"></div>
+
+							<h3 class="sans-serif">YOU ARE CORDIALLY INVITED TO THE LAUNCH</h3>
+							<p class="italic">of the</p>
+							<h4 class="serif-heading">NEW<br><span class="company-red">COMPANY</span><br>WEBSITE</h2>
+							<p class="sans-serif intro">Lorem ipsum dolor sit amet, vix suas liber conclusionemque eu. Ad quo esse purto eros, nemore volutpat ut quo, copiosae concludaturque nam in.</p>
+						</div>
+
+						<!--Lorem Ipsum list starts here-->
+						<div class="part2 sans-serif">
+							<!--Small red line dividing the first and second section-->
+							<div class="divider"></div>
+
+							<h3 class="center">AD EST ODIO NOSTER:</h3>
+							<ul>
+								<li>Ex vis amet groeci accumsan</li>
+								<li>Civibus iracundia quo ad</li>
+								<li>Eu impetus feugiat civibus qui</li>
+								<li>Mel in mucius arumentum, an accumsan petentium vim</li>
+								<li>Vim at rationibus interesset</li>
+							</ul>
+						</div>
+
+						<!--Form portion starts here-->
+						<div class="part3 center">
+							<h4 class="serif-heading">GET YOUR FOOT IN THE DOOR.</h4>
+							<p class="sans-serif">Know the moment our new website goes live.</p>
+
+							<form>
+								<h2 class="hide">Please enter your name:</h2>
+								<input class="name inputbox" type="text" placeholder="Name" required>
+								<h2 class="hide">Please enter your email:</h2>
+								<input class="email inputbox" type="text" placeholder="Email" required>
+								<h2 class="hide">Click to submit your information:</h2>
+								<input class="submit" type="submit" value="SUBMIT">
+								<br>
+								<h2 class="hide">Please check box to agree with terms and conditions:</h2>
+								<div class="conditions">
+									<input class="checkbox" type="checkbox" required>
+									<p class="sans-serif">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+								</div>
+								<!--The little square placed at the bottom of the page-->
+								<div class="floating-border2"></div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- JavaScript Source-->
+		<script src="js/main.js"></script>
+	</body>
+</html>

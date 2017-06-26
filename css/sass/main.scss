@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+//Variables Start Here
+
+$companyred: #9f173d;
+
+/*Common Classes Start Here*/
+
+/*This class will allow screen readers to detect and read the content, while hiding the content from sighted users.*/
+.hide{
+	position: absolute;
+	left:-10000px;
+	top: auto;
+}
+
+.center{
+	text-align: center;
+	justify-content: center;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.company-red{
+	color: $companyred;
+}
+
+.serif-heading{
+	font-family: "Playfair Display", serif;
+}
+
+.sans-serif{
+	font-family: "Roboto", sans-serif;
+}
+
+.no-read{
+	display: none;
+}
+
+/*Background "Website" Styles* Start Here*/
+
+body{
+	height: 1200px;
+	background-image: url("../img/bgimg.jpg");
+	background-size: 100%;
+}
+
+/*The wood chisel and shaving image styles start here*/
+
+.shaving-wrapper{
+	position:  absolute;
+	z-index: 99;
+	width: 100%;
+	pointer-events: none;
+
+	display: grid;
+  	grid-template-columns: repeat(10, 10%);
+  	grid-template-rows: repeat(6, 150px);
+}
+
+#chisel{
+	width: 350px;
+	height: 300px;
+
+	background-image: url(../img/big.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	grid-row: 4;
+	grid-column: 1;
+}
+
+#shave{
+	width: 100px;
+	height: 75px;
+	background-image: url(../img/little.png);
+	background-size: 90%;
+	background-repeat: no-repeat;
+
+	grid-row: 2;
+	grid-column: 9;
+}
+
+/*Chisel and shaving styling for between mobile and desktop*/
+@media (max-width: 1200px) and (min-width: 320px){
+	#chisel{
+		grid-row: 4;
+
+		width: 250px;
+		height: 200px;
+	}
+
+	#shave{
+		grid-row: 2;
+
+		width: 75px;
+		height: 50px;
+	}
+	
+}
+
+/*Chisel and shaving styling for approaching mobile*/
+@media (max-width: 850px){
+	#chisel{
+		display: none;
+	}
+
+	#shave{
+		display: none;
+	}
+	
+}
+
+
+/*General Popup Styles Start Here*/
+
+/*A simple div to replicate the spaced out border effect*/
+.popup-border{
+	margin-top: 130px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 65%;
+	padding: 5px;
+	border: 1px solid #fff;
+}
+
+/*Border styling for approaching mobile*/
+@media (min-width: 500px) and (max-width: 750px){
+	.popup-border{
+		width: 80%;
+	}
+}
+
+/*General styling for deep mobile*/
+@media (max-width: 500px){
+	.popup-border{
+		width: 95%;
+	}
+}
+
+/*This is the wrapper for the popup*/
+.popup{
+	z-index: 80;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+/*Exit Button styles start here*/
+
+.exit-wrapper{
+	z-index: 100;
+ 	width: 100%;
+	text-align: right;
+	background-color: #fff;
+
+	#exit{
+		margin-top: 15px;
+		margin-right: 15px;
+		border: none;
+		color: $companyred;
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+/*Popup Part 1 Styles start here*/
+
+.part1{
+	background-color: #fff;
+
+	h3{
+		position: relative;
+		z-index: 80;
+		margin: 0 auto;
+		width: 20%;
+		font-size: 14px;
+		letter-spacing: 2px;
+	}
+
+	h4{
+		position: relative;
+		z-index: 80;
+		font-size: 34px;
+	}
+
+	p{
+		position: relative;
+		z-index: 80;
+		margin: 0 auto;
+		margin-top: 25px;
+		width: 50%;
+	}
+}
+
+.floating-border1{
+	position: absolute;
+	top: 90px;
+	right: 0;
+	left: 0;
+	z-index: 70;
+	margin: auto;
+	width: 100px;
+	height: 360px;
+	border: 7px solid #f5f5f5;
+}
+
+.intro{
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+/*Part 1 styling for approaching mobile*/
+@media (max-width: 750px){
+	.popup{
+		h3{
+			width: 40%;
+			font-size: 12px;
+		}
+	}
+}
+
+/*Part 1 styling for deep mobile*/
+@media (max-width: 350px){
+	.popup{
+		h3{
+			width: 40%;
+			font-size: 10px;
+		}
+
+		p{
+			width: 80%;
+		}
+	}
+}
+
+/*Popup Part 2 Styles start here*/
+
+.part2{
+	overflow: hidden;
+
+	h3{
+		font-size: 14px;
+		letter-spacing: 2px;
+	}
+
+	ul{
+		margin: auto;
+		margin-top: 30px;
+		margin-bottom: 60px;
+		width: 40%;
+
+		li{
+			font-size: 14px;
+			list-style: none;
+		}
+		li::before{
+			content: "•"; color: $companyred;
+			margin-right: 10px;
+		}
+	}
+}
+
+.divider{
+	margin: 0 auto;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	width: 10%;
+	border-bottom: 2px solid $companyred;
+}
+
+/*Part 2 styling for approaching desktop*/
+@media (min-width: 750px) and (max-width: 1200px){
+	.part2{
+		h3{
+			margin: auto;
+		}
+
+		ul{
+			width: 70%;
+		}
+	}
+}
+
+/*Part 2 styling for approaching mobile*/
+@media (min-width: 320px) and (max-width:750px){
+	.part2{
+		h3{
+			margin: auto;
+			width: 80%;
+
+		}
+		ul{
+			width: 75%;
+		}
+	}
+
+	.divider{
+		width: 25%;
+	}
+}
+
+/*Part 2 styling for deep mobile*/
+@media (max-width:320px){
+	.part2{
+		h3{
+			margin: auto;
+		}
+		ul{
+			width: 85%;
+		}
+	}
+
+	.divider{
+		width: 25%;
+	}
+}
+
+/*Popup Part 3 Styles start here*/
+
+.part3{
+	padding-top: 65px;
+	padding-bottom: 65px;
+	background: $companyred;
+	color: #fff;
+
+	h4{
+		margin: 0;
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+	p{
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	input[type=text]{
+	    width: 200px;
+	    margin-top: 5px;
+	    padding: 10px 10px;
+	    border: none;
+	    color: black;
+	    font-family: "Roboto", sans-serif;
+	}
+
+	input[type=submit]{
+	    width: 100px;
+	    margin-top: 5px;
+	    padding: 10px 10px;
+	    border: none;
+	    color: #fff;
+	    font-family: "Playfair Display", serif; 
+	    background-color: #000;
+	}
+}
+
+.conditions{
+	margin: auto;
+	width: 40%;
+	display: flex;
+	text-align: left;
+	font-size: 11px;
+
+	input[type=checkbox]{
+		background-color: $companyred;
+	}
+
+	.checkbox{
+		justify-content: flex-start;
+	}
+
+	p{
+		justify-content: flex-end;
+		padding-top: 20px;
+		font-size: 10px;
+	}
+}
+
+.floating-border2{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-top: 25px;
+	margin-left: auto; 
+ 	margin-right: auto;
+	z-index: 70;
+	width: 100px;
+	height: 70px;
+	border: 7px solid #f5f5f5;
+}
+
+/*Part 3 styling for approaching mobile*/
+@media (min-width: 320px) and (max-width: 750px){
+	.conditions{
+		width: 60%;
+	}
+}
+
+/*Part 3 styling for intermediate mobile*/
+@media (min-width: 383px) and (max-width: 585px){
+	.part3{
+		input[type=text]{
+			margin-left: 10px;
+		    float: left;
+		}
+
+		input[type=submit]{
+			margin-right: 10px;
+		    float: right;
+		}
+	}
+}
+
+/*Part 3 styling for deep mobile*/
+@media (max-width: 320px){
+	.part3{
+		p{
+			margin: auto;
+			margin-bottom: 10px;
+			font-size: 12px;
+		}
+	}
+	.conditions{
+		width: 90%;
+	}
+}
