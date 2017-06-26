@@ -345,8 +345,8 @@ body{
 	text-align: left;
 	font-size: 11px;
 
-	inpute[type=checkbox]{
-		background: none;
+	input[type=checkbox]{
+		background-color: $companyred;
 	}
 
 	.checkbox{

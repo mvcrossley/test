@@ -236,8 +236,8 @@ body {
   display: flex;
   text-align: left;
   font-size: 11px; }
-  .conditions inpute[type=checkbox] {
-    background: none; }
+  .conditions input[type=checkbox] {
+    background-color: #9f173d; }
   .conditions .checkbox {
     justify-content: flex-start; }
   .conditions label {
